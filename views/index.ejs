@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogbook</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="parent">
+
+  <!-- HEADER -->
+  <div class="div1">
+    <h1>Blogbook</h1>
+  </div>
+
+  <!-- CREATE POST SIDEBAR -->
+  <div class="div2">
+    <h3>New Post</h3>
+    <form action="/new" method="POST">
+      <input name="title" placeholder="Title" required />
+      <br><br>
+      <textarea name="content" placeholder="Write..." required></textarea>
+      <br><br>
+      <button type="submit">Post</button>
+    </form>
+  </div>
+
+  <!-- TOP RIGHT INFO -->
+  <div class="div3">
+    <p>simple blog</p>
+  </div>
+
+  <!-- RIGHT SIDEBAR -->
+  <div class="div5">
+    <p>Total posts: <%= posts.length %></p>
+  </div>
+
+  <!-- POSTS HEADER -->
+  <div class="div6">
+    <h2>Recent Posts</h2>
+  </div>
+
+  <!-- POSTS FEED -->
+  <div class="div7">
+    <% if (posts.length === 0) { %>
+      <p>No posts yet.</p>
+    <% } %>
+
+    <% posts.forEach(post => { %>
+      <article class="post">
+        <h3><%= post.title %></h3>
+        <p><%= post.content %></p>
+
+        <form action="/edit/<%= post.id %>" method="GET" style="display:inline;">
+          <button>Edit</button>
+        </form>
+
+        <form action="/delete/<%= post.id %>?_method=DELETE" method="POST" style="display:inline;">
+          <button>Delete</button>
+        </form>
+      </article>
+      <hr>
+    <% }) %>
+  </div>
+
+</div>
+
+</body>
+</html>

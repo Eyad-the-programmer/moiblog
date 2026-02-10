@@ -1,0 +1,231 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #e8fff7 50%,
+    #c8f3ea 100%
+  );
+  color: #1c1e21;
+}
+
+/* GRID LAYOUT */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 20px;
+}
+
+/* HEADER */
+.div1 {
+  grid-area: 1 / 1 / 2 / 3;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.div1 h1 {
+  color: #1b9c8a;
+}
+
+/* NEW POST SIDEBAR */
+.div2 {
+  grid-area: 2 / 1 / 6 / 2;
+  background: white;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.div2 input,
+.div2 textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.div2 button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1b9c8a, #36d1b4);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* TOP RIGHT */
+.div3 {
+  grid-area: 1 / 5 / 2 / 6;
+  background: white;
+  padding: 16px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* RIGHT SIDEBAR */
+.div5 {
+  grid-area: 2 / 5 / 6 / 6;
+  background: white;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* POSTS HEADER */
+.div6 {
+  grid-area: 2 / 2 / 3 / 5;
+  padding: 10px;
+}
+
+.div6 h2 {
+  color: #1b9c8a;
+}
+
+/* POSTS FEED */
+.div7 {
+  grid-area: 3 / 2 / 6 / 5;
+}
+
+/* POST CARD */
+.post {
+  background: white;
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+}
+
+.post h3 {
+  margin-bottom: 8px;
+}
+
+.post p {
+  margin-bottom: 12px;
+  color: #444;
+}
+
+/* POST BUTTONS */
+.post button {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.post form:first-of-type button {
+  background: #eef2f5;
+}
+
+.post form:last-of-type button {
+  background: #ff5c5c;
+  color: white;
+}
+
+/* ===== EDIT PAGE ===== */
+
+.edit-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffffff, #e8fff7);
+}
+
+.edit-card {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.edit-title {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #1b9c8a;
+}
+
+/* FORM */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.edit-form label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #555;
+}
+
+.edit-form input,
+.edit-form textarea {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  resize: none;
+}
+
+.edit-form input:focus,
+.edit-form textarea:focus {
+  outline: none;
+  border-color: #1b9c8a;
+}
+
+/* BUTTONS */
+.edit-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.save-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #1b9c8a, #36d1b4);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  opacity: 0.9;
+}
+
+.cancel-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 999px;
+  text-align: center;
+  text-decoration: none;
+  background: #f1f3f5;
+  color: #333;
+  font-weight: 600;
+}
+
+.cancel-btn:hover {
+  background: #e2e6ea;
+}
+
+

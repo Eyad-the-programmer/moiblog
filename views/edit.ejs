@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Post</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="edit-page">
+
+  <div class="edit-card">
+    <h1 class="edit-title">Edit Post</h1>
+
+    <form class="edit-form" action="/edit/<%= post.id %>?_method=PUT" method="POST">
+
+      <label>Title</label>
+      <input
+        type="text"
+        name="title"
+        value="<%= post.title %>"
+        required
+      />
+
+      <label>Content</label>
+      <textarea
+        name="content"
+        rows="8"
+        required
+      ><%= post.content %></textarea>
+
+      <div class="edit-actions">
+        <button type="submit" class="save-btn">Save changes</button>
+        <a href="/" class="cancel-btn">Cancel</a>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+</body>
+</html>
