@@ -4,7 +4,7 @@ import methodOverride from "method-override";
 
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 let posts = [];
 let currentId = 1;
